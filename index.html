@@ -127,6 +127,11 @@ section{padding:100px 0}
 .product-card .cart-btn{width:36px;height:36px;border-radius:50%;background:var(--green);color:#fff;border:none;cursor:pointer;display:flex;align-items:center;justify-content:center;transition:.3s}
 .product-card .cart-btn:hover{background:var(--brown)}
 
+/* ===== 产品展示区域图片强制正方形 ===== */
+#products-show .fruit-card img {
+  aspect-ratio: 1/1 !important;
+}
+
 /* MEMBER */
 .member-section{background:linear-gradient(135deg,var(--green) 0%,#3A6347 100%);color:#fff;border-radius:24px;padding:80px 48px;text-align:center;position:relative;overflow:hidden}
 .member-section::before{content:'';position:absolute;top:-50%;right:-20%;width:500px;height:500px;background:rgba(255,255,255,.05);border-radius:50%}
@@ -175,6 +180,19 @@ section{padding:64px 0}
 .hero h1{font-size:2.2rem}
 .adopt-cards{grid-template-columns:1fr}
 .dining-hero{aspect-ratio:16/9}
+}
+/* ===== 产品展示区域图片强制正方形（不影响水果采摘） ===== */
+#products .fruit-card img {
+  aspect-ratio: 1/1 !important;
+  object-fit: cover;
+}
+
+/* 手机端确保产品展示图片正方形显示 */
+@media (max-width: 600px) {
+  #products .fruit-card img {
+    aspect-ratio: 1/1 !important;
+    object-fit: cover;
+  }
 }
 </style>
 </head>
@@ -460,6 +478,7 @@ section{padding:64px 0}
 </div>
 </section>
 
+<!-- PRODUCTS -->
 <section id="products" class="section-alt">
 <div class="container">
 <div class="section-header fade-up">
@@ -469,7 +488,7 @@ section{padding:64px 0}
 </div>
 <div class="fruit-cards fade-up">
 <div class="fruit-card">
-<img src="https://i.ibb.co/B2RBPm6b/lihexiaotu.jpg">
+<img src="https://i.ibb.co/gZGZmWk1/lihexiaotu1.jpg">
 <div class="info">
 <h4>时尚高档礼盒</h4>
 <p style="color:var(--text-light);font-size:.9rem;margin-bottom:8px">精装臻礼，尽显尊崇与档次，体面馈赠佳品</p>
@@ -478,7 +497,7 @@ section{padding:64px 0}
 </div>
 </div>
 <div class="fruit-card">
-<img src="https://i.ibb.co/GZcX84p/pipaxiaotu.jpg">
+<img src="https://i.ibb.co/Ng3G4v6Y/pipaxiaotu1.jpg">
 <div class="info">
 <h4>五星枇杷</h4>
 <p style="color:var(--text-light);font-size:.9rem;margin-bottom:8px">一年一季，零化肥零农残· 500g装</p>
@@ -487,7 +506,7 @@ section{padding:64px 0}
 </div>
 </div>
 <div class="fruit-card">
-<img src="https://i.ibb.co/4ZRykWxY/caomeixiaotu.jpg">
+<img src="https://i.ibb.co/BH2F4CQy/caomeixiaotu1.jpg">
 <div class="info">
 <h4>新鲜高山红草莓</h4>
 <p style="color:var(--text-light);font-size:.9rem;margin-bottom:8px">一年一季，零化肥零农残· 500g装</p>
@@ -496,7 +515,7 @@ section{padding:64px 0}
  </div>
 </div>
 <div class="fruit-card">
-<img src="https://i.ibb.co/V4jFQ9N/lizixiaotu.jpg">
+<img src="https://i.ibb.co/QjfGRwfZ/lizixiaotu1.jpg">
 <div class="info">
 <h4>蜂糖李</h4>
 <p style="color:var(--text-light);font-size:.9rem;margin-bottom:8px">一年一季，零化肥零农残· 500g装</p>
@@ -505,7 +524,7 @@ section{padding:64px 0}
 </div>
 </div>
 <div class="fruit-card">
-<img src="https://i.ibb.co/qYBx216Q/huangtaoxiaotu.jpg">
+<img src="https://i.ibb.co/jk81t2Ks/huangtaoxiaotu1.jpg">
 <div class="info">
 <h4>早中桃9号</h4>
 <p style="color:var(--text-light);font-size:.9rem;margin-bottom:8px">一年一季 · 零化肥零农残 · 500g装</p>
@@ -514,7 +533,7 @@ section{padding:64px 0}
  </div>
 </div>
 <div class="fruit-card">
-<img src="https://i.ibb.co/nqv2BkPb/yingtaoxiaotu.jpg">
+<img src="https://i.ibb.co/KxDbMfZj/yingtaoxiaotu1.jpg">
 <div class="info">
 <h4>樱桃</h4>
 <p style="color:var(--text-light);font-size:.9rem;margin-bottom:8px">一年一季 · 零化肥零农残 · 500g装</p>
@@ -523,7 +542,7 @@ section{padding:64px 0}
 </div>
 </div>
 <div class="fruit-card">
-<img src="https://i.ibb.co/cSQGg98j/youtaoxiaotu.jpg">
+<img src="https://i.ibb.co/mVm5F3Qm/youtaoxiaotu1.jpg">
 <div class="info">
 <h4>油桃</h4>
 <p style="color:var(--text-light);font-size:.9rem;margin-bottom:8px">一年一季 · 零化肥零农残 · 500g装</p>
@@ -532,7 +551,7 @@ section{padding:64px 0}
 </div>
 </div>
 <div class="fruit-card">
-<img src="https://i.ibb.co/FLfd940G/huolongguoxiaotu.jpg">
+<img src="https://i.ibb.co/fz1Sh2Yr/huolongguoxiaotu1.jpg">
 <div class="info">
 <h4>火龙果</h4>
 <p style="color:var(--text-light);font-size:.9rem;margin-bottom:8px">一年一季 · 零化肥零农残 · 500g装</p>
@@ -541,7 +560,7 @@ section{padding:64px 0}
 </div>
 </div>
 <div class="fruit-card">
-<img src="https://i.ibb.co/B5HhZwH9/putaoxiaotu.jpg">
+<img src="https://i.ibb.co/cSyVrBrB/putaoxiaotu1.jpg">
 <div class="info">
 <h4>黑美人葡萄</h4>
 <p style="color:var(--text-light);font-size:.9rem;margin-bottom:8px">一年一季 · 零化肥零农残 · 500g装</p>
@@ -550,7 +569,7 @@ section{padding:64px 0}
 </div>
 </div>
 <div class="fruit-card">
-<img src="https://i.ibb.co/Fkx3SBbY/jidanxiaotu.jpg">
+<img src="https://i.ibb.co/N2ZTyJTW/jidanxiaotu1.jpg">
 <div class="info">
 <h4>散养土鸡蛋</h4>
 <p style="color:var(--text-light);font-size:.9rem;margin-bottom:8px">维生素高于普通鸡蛋20% · 500g装</p>
@@ -559,7 +578,7 @@ section{padding:64px 0}
 </div>
 </div>
 <div class="fruit-card">
-<img src="https://i.ibb.co/24KDWSV/zhurouxiaotu.jpg">
+<img src="https://i.ibb.co/ZzzrTXP8/zhurouxiaotu1.jpg">
 <div class="info">
 <h4>黑土猪肉</h4>
 <p style="color:var(--text-light);font-size:.9rem;margin-bottom:8px">农场散养 · 新鲜现杀 · 500g装</p>
@@ -663,7 +682,7 @@ document.getElementById('mobileMenu').classList.toggle('open');
 const observer=new IntersectionObserver((entries)=>{
 entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('visible');observer.unobserve(e.target)}});
 },{threshold:0.1,rootMargin:'0px'});
-document.querySelectorAll('.fade-up:not(.visible)').forEach(el=>observer.observe(el));
+document.querySelectorAll('.fade-up').forEach(el=>observer.observe(el));
 
 // Active nav highlight on scroll
 const sections=document.querySelectorAll('section[id]');
